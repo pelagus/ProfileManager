@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'ProfileManager.views.home', name='home'),
+    url(r'^$', 'ProfileManager.profile.views.home', name='home'),
     # url(r'^ProfileManager/', include('ProfileManager.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -14,4 +14,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+
+    url(r'', include('social_auth.urls')),
 )

@@ -9,6 +9,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+import os
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -103,9 +106,12 @@ ROOT_URLCONF = 'ProfileManager.urls'
 WSGI_APPLICATION = 'ProfileManager.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_ROOT, 'templates'),
+)
+
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.facebook.FacebookBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 INSTALLED_APPS = (
@@ -119,6 +125,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
+
+    'social_auth',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -149,6 +158,14 @@ LOGGING = {
         },
     }
 }
+
+# settings needed to make facebook, linkedin login enable
+SOCIAL_AUTH_ENABLED_BACKENDS = ('facebook', 'linkedin',)
+LOGIN_REDIRECT_URL = '/'
+
+# facebook app_id and app_secret
+FACEBOOK_APP_ID = ''
+FACEBOOK_API_SECRET = ''
 
 try:
     from local_settings import *
