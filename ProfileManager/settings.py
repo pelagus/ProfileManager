@@ -111,6 +111,7 @@ TEMPLATE_DIRS = (
 
 AUTHENTICATION_BACKENDS = (
     'social_auth.backends.facebook.FacebookBackend',
+    'social_auth.backends.contrib.linkedin.LinkedinBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -166,6 +167,10 @@ LOGIN_REDIRECT_URL = '/'
 # facebook app_id and app_secret
 FACEBOOK_APP_ID = ''
 FACEBOOK_API_SECRET = ''
+
+# linkedin consumer key and secret
+LINKEDIN_CONSUMER_KEY = ''
+LINKEDIN_CONSUMER_SECRET = ''
 
 try:
     from local_settings import *
