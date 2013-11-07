@@ -14,11 +14,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'd55l3eslm0uo6h',                      # Or path to database file if using sqlite3.
+        'USER': 'yoanvzqfcikxgi',                      # Not used with sqlite3.
+        'PASSWORD': 'lLcYgkQdPu_sxm9jEwYiYZAk_q',                  # Not used with sqlite3.
+        'HOST': 'ec2-174-129-21-42.compute-1.amazonaws.com',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
