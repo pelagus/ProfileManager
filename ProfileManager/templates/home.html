@@ -4,13 +4,12 @@
 
 {% block content %}
 <div data-role="page">
-    <div data-role="header" data-position="fixed">
-        <a href="#" class="ui-btn-left" data-rel="back" data-ajax="false">Back</a>
-        <h1>Profile</h1>
-        <a href="{% url  logout %}" class="ui-btn-right" rel="external">Logout</a>
-    </div>
     <div data-role="content">
-        <h2>{{ user.first_name }}&nbsp;{{ user.last_name }}</h2>
+        <a href="{% url socialauth_begin 'linkedin' %}" data-role="button" data-icon="facebook" rel="external">Login with LinkedIn</a>
+        <a href="{% url login %}" data-role="button" data-icon="facebook" rel="external">Login with Edulele</a>
+        <br/>
+        <a href="#">Forgot your password?</a><br/><br/>
+        <a href="#">Create an Edulele account</a>
     </div>
 </div>
 {% endblock %}

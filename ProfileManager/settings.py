@@ -160,7 +160,7 @@ LOGGING = {
     }
 }
 
-LOGIN_URL = '/login'
+LOGIN_URL = '/home'
 
 # settings needed to make facebook, linkedin login enable
 SOCIAL_AUTH_ENABLED_BACKENDS = ('facebook', 'linkedin',)
