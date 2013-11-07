@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div data-role="page">
+    <div data-role="content">
+        <a href="{% url socialauth_begin 'linkedin' %}" data-role="button" data-icon="facebook" rel="external">Login with LinkedIn</a>
+        <a href="{% url home %}" data-role="button" data-icon="facebook" rel="external">Login with Edulele</a>
+    </div>
+</div>
+{% endblock %}

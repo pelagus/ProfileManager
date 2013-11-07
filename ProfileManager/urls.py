@@ -7,6 +7,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'ProfileManager.profile.views.home', name='home'),
+    url(r'^login/$', 'ProfileManager.profile.views.login', name='login'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page':'/',}, name='logout'),
     # url(r'^ProfileManager/', include('ProfileManager.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
