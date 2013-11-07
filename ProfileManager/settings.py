@@ -167,12 +167,12 @@ SOCIAL_AUTH_ENABLED_BACKENDS = ('facebook', 'linkedin',)
 LOGIN_REDIRECT_URL = '/'
 
 # facebook app_id and app_secret
-FACEBOOK_APP_ID = ''
-FACEBOOK_API_SECRET = ''
+FACEBOOK_APP_ID = '1402294503341665'
+FACEBOOK_API_SECRET = '5129404272afc8cdd320237c209aa64d'
 
 # linkedin consumer key and secret
-LINKEDIN_CONSUMER_KEY = ''
-LINKEDIN_CONSUMER_SECRET = ''
+LINKEDIN_CONSUMER_KEY = 'haouf8cmvdjb'
+LINKEDIN_CONSUMER_SECRET = 'D2fxrUwW2bZ8QxBU'
 
 try:
     from local_settings import *
