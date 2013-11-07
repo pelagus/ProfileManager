@@ -8,4 +8,5 @@ ProfileManager
 - django-social-auth
 - jQuery mobile
 
-
+# This Django site is deployed to Heroku
+http://profile-manager-dev.herokuapp.com/
