@@ -13,6 +13,11 @@ def login(request):
                               {},
                               context_instance = RequestContext(request))
 
+def signup(request):
+    return render_to_response("signup.html",
+                              {},
+                              context_instance = RequestContext(request))
+
 @login_required
 def profile(request):
     return render_to_response("profile.html",

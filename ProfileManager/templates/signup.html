@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Signup{% endblock %}
+
+{% block content %}
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+        <a href="#" class="ui-btn-left" data-rel="back" data-ajax="false">Back</a>
+        <h1>Create an account</h1>
+    </div>
+    <div data-role="content">
+        <label for="first_name">First name:</label>
+        <input type="text" name="first_name" id="first_name" value="">
+        <label for="last_name">Last name:</label>
+        <input type="text" name="last_name" id="last_name" value="">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" value="">
+        <fieldset class="ui-grid-a">
+            <div class="ui-block-a"></div>
+            <div class="ui-block-b">
+                <a href="#" data-role="button" rel="external" data-theme="e">Submit</a>
+            </div>
+        </fieldset>
+        <br/>
+        <p>Do you have an facebook account?</p>
+        <p>Click the button bellow to save time</p>
+        <a href="{% url socialauth_begin 'facebook' %}" data-role="button" data-icon="facebook" rel="external" data-theme="b">Login with Facebook</a>
+    </div>
+</div>
+{% endblock %}
