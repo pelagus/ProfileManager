@@ -3,5 +3,14 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Home</h1>
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+        <a href="#" class="ui-btn-left" data-rel="back" data-ajax="false">Back</a>
+        <h1>Profile</h1>
+        <a href="{% url  logout %}" class="ui-btn-right" rel="external">Logout</a>
+    </div>
+    <div data-role="content">
+        <h2>{{ user.first_name }}&nbsp;{{ user.last_name }}</h2>
+    </div>
+</div>
 {% endblock %}
